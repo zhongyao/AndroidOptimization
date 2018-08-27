@@ -16,9 +16,9 @@ import android.os.Bundle;
  * Layout Inspector工具来遍历视图层级
  *
  * 解决过度绘制的方法：
- * 1、去除不必要的背景色
- * 2、扁平化布局
- * 3、降低透明度
+ * 1、去除不必要的背景色（background）
+ * 2、扁平化布局（ConstraintLayout）
+ * 3、降低透明度（alpha）
  *
  */
 public class OverdrawActivity extends AppCompatActivity {
