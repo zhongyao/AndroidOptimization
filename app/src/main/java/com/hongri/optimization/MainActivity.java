@@ -49,6 +49,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn;
+    private Button overdrawBtn;
+    private Button constraintLayoutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btn = findViewById(R.id.btn);
-        btn.setOnClickListener(this);
+        overdrawBtn = findViewById(R.id.overdrawBtn);
+        constraintLayoutBtn = findViewById(R.id.constraintLayoutBtn);
 
+        btn.setOnClickListener(this);
+        overdrawBtn.setOnClickListener(this);
+        constraintLayoutBtn.setOnClickListener(this);
     }
 
     @Override
@@ -66,6 +72,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn:
                 Intent intent = new Intent(this, SecondActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.overdrawBtn:
+                Intent intentOverdraw = new Intent(this, OverdrawActivity.class);
+                startActivity(intentOverdraw);
+                break;
+            case R.id.constraintLayoutBtn:
+                Intent intentConstraintLayout = new Intent(this, ConstraintLayoutActivity.class);
+                startActivity(intentConstraintLayout);
                 break;
             default:
                 break;
