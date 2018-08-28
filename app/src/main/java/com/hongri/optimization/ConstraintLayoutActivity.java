@@ -3,6 +3,9 @@ package com.hongri.optimization;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/**
+ * 扁平化布局Activity
+ */
 public class ConstraintLayoutActivity extends AppCompatActivity {
 
     @Override

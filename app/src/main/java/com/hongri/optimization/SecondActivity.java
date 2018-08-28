@@ -21,17 +21,17 @@ public class SecondActivity extends AppCompatActivity {
          * 内存泄漏测试代码
          */
         // 此activity持有10000个view对象
-        //for (int i = 0; i < 10000; i++) {
-        //    imageViews.add(new ImageView(this));
-        //}
-        //
-        //mHandler = new Handler();
-        //// 100秒后执行此Runnable
-        //mHandler.postDelayed(new Runnable() {
-        //    @Override
-        //    public void run() {
-        //
-        //    }
-        //}, 100 * 1000);
+        for (int i = 0; i < 10000; i++) {
+            imageViews.add(new ImageView(this));
+        }
+
+        mHandler = new Handler();
+        // 100秒后执行此Runnable
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }, 100 * 1000);
     }
 }

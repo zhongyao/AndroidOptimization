@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn;
     private Button overdrawBtn;
     private Button constraintLayoutBtn;
+    private Button renderingAnalysisBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +61,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn = findViewById(R.id.btn);
         overdrawBtn = findViewById(R.id.overdrawBtn);
         constraintLayoutBtn = findViewById(R.id.constraintLayoutBtn);
+        renderingAnalysisBtn = findViewById(R.id.renderingAnalysisBtn);
 
         btn.setOnClickListener(this);
         overdrawBtn.setOnClickListener(this);
         constraintLayoutBtn.setOnClickListener(this);
+        renderingAnalysisBtn.setOnClickListener(this);
     }
 
     @Override
@@ -80,6 +83,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.constraintLayoutBtn:
                 Intent intentConstraintLayout = new Intent(this, ConstraintLayoutActivity.class);
                 startActivity(intentConstraintLayout);
+                break;
+            case R.id.renderingAnalysisBtn:
+                Intent intentRenderingAnalysis = new Intent(this, RenderingAnalysisActivity.class);
+                startActivity(intentRenderingAnalysis);
                 break;
             default:
                 break;

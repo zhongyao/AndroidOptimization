@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".ConstraintLayoutActivity">
         </activity>
+        <activity android:name=".RenderingAnalysisActivity">
+        </activity>
     </application>
 
 </manifest>

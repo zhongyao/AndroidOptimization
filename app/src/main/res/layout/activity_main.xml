@@ -46,4 +46,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/overdrawBtn"/>
 
+    <Button
+        android:id="@+id/renderingAnalysisBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="渲染Activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutBtn"/>
+
 </android.support.constraint.ConstraintLayout>
