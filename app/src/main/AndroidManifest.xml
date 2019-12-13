@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.hongri.optimization">
+    package="com.hongri.optimization">
 
     <application
         android:allowBackup="true"
@@ -9,21 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Profiler.CPUProfilerActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".OverdrawActivity">
-        </activity>
-        <activity android:name=".ConstraintLayoutActivity">
-        </activity>
-        <activity android:name=".RenderingAnalysisActivity">
-        </activity>
+        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".OverdrawActivity"></activity>
+        <activity android:name=".ConstraintLayoutActivity"></activity>
+        <activity android:name=".RenderingAnalysisActivity"></activity>
     </application>
 
 </manifest>
