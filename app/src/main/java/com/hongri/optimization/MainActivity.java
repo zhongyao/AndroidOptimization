@@ -12,7 +12,7 @@ import android.widget.Button;
  *         Android优化包含如下几个部分：
  *         一、布局优化：
  *         1、如果布局中既可以采用RelativeLayout，也可以采用LinearLayout，建议使用LinearLayout（FrameLayout）。
- *         2、尽量减少布局的层架
+ *         2、尽量减少布局的层次
  *         3、采用<include>标签、<merge>标签和ViewStub：
  *         <include>标签主要用于布局重用。
  *         <merge>标签一般和<include>配合使用，可以减少布局的层级。
