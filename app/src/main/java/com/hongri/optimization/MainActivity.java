@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.hongri.optimization.leakcanary.LeakCanaryActivity;
+
 /**
  * @author hongri
  *
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button overdrawBtn;
     private Button constraintLayoutBtn;
     private Button renderingAnalysisBtn;
+    private Button leakCanaryBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +65,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         overdrawBtn = findViewById(R.id.overdrawBtn);
         constraintLayoutBtn = findViewById(R.id.constraintLayoutBtn);
         renderingAnalysisBtn = findViewById(R.id.renderingAnalysisBtn);
+        leakCanaryBtn = findViewById(R.id.leakCanaryBtn);
 
         btn.setOnClickListener(this);
         overdrawBtn.setOnClickListener(this);
         constraintLayoutBtn.setOnClickListener(this);
         renderingAnalysisBtn.setOnClickListener(this);
+        leakCanaryBtn.setOnClickListener(this);
     }
 
     @Override
@@ -87,6 +92,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.renderingAnalysisBtn:
                 Intent intentRenderingAnalysis = new Intent(this, RenderingAnalysisActivity.class);
                 startActivity(intentRenderingAnalysis);
+                break;
+            case R.id.leakCanaryBtn:
+                Intent intentLeakCanary = new Intent(this, LeakCanaryActivity.class);
+                startActivity(intentLeakCanary);
                 break;
             default:
                 break;
