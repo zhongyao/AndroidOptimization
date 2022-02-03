@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hongri.optimization.MainActivity">
+    tools:context="com.hongri.optimization.activity.MainActivity">
 
     <Button
         android:id="@+id/btn"
@@ -52,5 +52,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/renderingAnalysisBtn" />
+
+    <Button
+        android:id="@+id/blockCanaryBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="主线程卡顿(BlockCanary)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leakCanaryBtn" />
 
 </android.support.constraint.ConstraintLayout>

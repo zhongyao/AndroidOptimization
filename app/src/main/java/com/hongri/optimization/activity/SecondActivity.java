@@ -1,4 +1,4 @@
-package com.hongri.optimization;
+package com.hongri.optimization.activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+
+import com.hongri.optimization.R;
 
 public class SecondActivity extends AppCompatActivity {
     List<ImageView> imageViews = new ArrayList<>();

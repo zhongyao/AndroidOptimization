@@ -1,4 +1,4 @@
-package com.hongri.optimization;
+package com.hongri.optimization.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.hongri.optimization.R;
+import com.hongri.optimization.blockcanary.BlockCanaryActivity;
 import com.hongri.optimization.leakcanary.LeakCanaryActivity;
 
 /**
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button constraintLayoutBtn;
     private Button renderingAnalysisBtn;
     private Button leakCanaryBtn;
+    private Button blockCanaryBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +69,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         constraintLayoutBtn = findViewById(R.id.constraintLayoutBtn);
         renderingAnalysisBtn = findViewById(R.id.renderingAnalysisBtn);
         leakCanaryBtn = findViewById(R.id.leakCanaryBtn);
+        blockCanaryBtn = findViewById(R.id.blockCanaryBtn);
 
         btn.setOnClickListener(this);
         overdrawBtn.setOnClickListener(this);
         constraintLayoutBtn.setOnClickListener(this);
         renderingAnalysisBtn.setOnClickListener(this);
         leakCanaryBtn.setOnClickListener(this);
+        blockCanaryBtn.setOnClickListener(this);
     }
 
     @Override
@@ -96,6 +101,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.leakCanaryBtn:
                 Intent intentLeakCanary = new Intent(this, LeakCanaryActivity.class);
                 startActivity(intentLeakCanary);
+                break;
+            case R.id.blockCanaryBtn:
+                Intent intentBlockCanary = new Intent(this, BlockCanaryActivity.class);
+                startActivity(intentBlockCanary);
                 break;
             default:
                 break;

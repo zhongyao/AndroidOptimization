@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.hongri.optimization.OverdrawActivity">
+    tools:context="com.hongri.optimization.activity.OverdrawActivity">
 
     <!--过度绘制一次-蓝色-->
     <LinearLayout

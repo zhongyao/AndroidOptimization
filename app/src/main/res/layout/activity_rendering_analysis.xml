@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hongri.optimization.RenderingAnalysisActivity">
+    tools:context="com.hongri.optimization.activity.RenderingAnalysisActivity">
 
     <com.hongri.optimization.view.CustomDraw
         android:id="@+id/customDraw"
