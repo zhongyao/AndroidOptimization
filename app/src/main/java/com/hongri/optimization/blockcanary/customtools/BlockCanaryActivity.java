@@ -1,4 +1,4 @@
-package com.hongri.optimization.blockcanary;
+package com.hongri.optimization.blockcanary.customtools;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +22,9 @@ public class BlockCanaryActivity extends AppCompatActivity implements View.OnCli
         testBlockBtn.setOnClickListener(this);
     }
 
-
+    /**
+     * 模拟卡顿操作
+     */
     private void testBlock() {
         try {
             Thread.sleep(500);
@@ -39,7 +41,6 @@ public class BlockCanaryActivity extends AppCompatActivity implements View.OnCli
             case R.id.testBlockBtn:
                 testBlock();
                 break;
-
             default:
                 break;
         }

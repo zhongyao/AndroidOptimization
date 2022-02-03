@@ -3,7 +3,7 @@ package com.hongri.optimization;
 import android.app.Application;
 import android.util.Log;
 
-import com.hongri.optimization.blockcanary.BlockDetectByPrinter;
+import com.hongri.optimization.blockcanary.customtools.BlockDetectByPrinter;
 
 public class OptimizationApplication extends Application {
 
