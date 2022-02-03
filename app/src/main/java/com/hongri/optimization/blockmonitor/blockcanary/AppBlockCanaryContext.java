@@ -1,4 +1,4 @@
-package com.hongri.optimization.blockcanary.realtools;
+package com.hongri.optimization.blockmonitor.blockcanary;
 
 import android.content.Context;
 
@@ -18,7 +18,7 @@ import java.util.List;
  * 原因：
  * 使用API级别26或更高版本无法访问/ proc / stat。 Google已将其限制为非系统应用程序。
  * 从API级别26开始，只有系统应用程序可以访问/ proc / stat
- * 
+ *
  * 实现各种上下文，包括应用标示符，用户uid，网络类型，卡慢判断阙值，Log保存位置等
  */
 public class AppBlockCanaryContext extends BlockCanaryContext {

@@ -1,13 +1,16 @@
-package com.hongri.optimization.blockcanary.customtools;
+package com.hongri.optimization.blockmonitor.customtools;
 
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.util.Log;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 /**
  * 这里利用了 HandlerThread 来检测耗时方法：
- *
+ * <p>
  * 在分发和处理消息开始前，发送一个延迟300毫秒的消息，
  * 如果分发和处理消息结束后还不到300毫秒，也就是消息处理时间小于300毫秒就会移除这个延迟300毫秒的消息，
  * 否则就会打印出这个耗时消息的栈轨迹。
@@ -17,7 +20,7 @@ public class LogMonitor {
     private static LogMonitor sInstance = new LogMonitor();
     private Handler mIoHandler;
     //方法耗时的卡口,300毫秒
-    private static final long TIME_BLOCK = 300L;
+    private static long TIME_BLOCK = 300L;
 
     private LogMonitor() {
         HandlerThread logThread = new HandlerThread("log");
@@ -44,6 +47,23 @@ public class LogMonitor {
         return sInstance;
     }
 
+    public void setTimeBlock(long timeBlock) {
+        TIME_BLOCK = timeBlock;
+    }
+
+    public boolean isMonitor() {
+        Class handlerClass;
+        Method method;
+        try {
+            handlerClass = Class.forName("android.os.Handler");
+            method = handlerClass.getDeclaredMethod("hasCallbacks", Runnable.class);
+            method.setAccessible(true);
+            return (boolean) method.invoke(mIoHandler, mLogRunnable);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
     /**
      * 开始计时

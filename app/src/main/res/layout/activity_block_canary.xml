@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".blockcanary.BlockCanaryActivity">
+    tools:context=".blockmonitor.BlockCanaryActivity">
 
     <Button
         android:id="@+id/testBlockBtn"
@@ -23,5 +23,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/testBlockBtn" />
+
+    <Button
+        android:id="@+id/choreographerBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Choreographer(编舞者)检测UI卡顿"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blockCanaryBtn" />
 
 </android.support.constraint.ConstraintLayout>

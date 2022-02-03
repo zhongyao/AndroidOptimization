@@ -1,4 +1,4 @@
-package com.hongri.optimization.blockcanary;
+package com.hongri.optimization.blockmonitor;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +11,8 @@ import com.hjq.permissions.OnPermissionCallback;
 import com.hjq.permissions.Permission;
 import com.hjq.permissions.XXPermissions;
 import com.hongri.optimization.R;
-import com.hongri.optimization.activity.MainActivity;
+import com.hongri.optimization.blockmonitor.choreographer.BlockDetectByChoreographer;
+import com.hongri.optimization.util.DisplayUtil;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class BlockCanaryActivity extends AppCompatActivity implements View.OnCli
 
     private Button testBlockBtn;
     private Button blockCanaryBtn;
+    private Button choreographerBtn;
     private String[] PERMISSIONS = {Permission.READ_EXTERNAL_STORAGE, Permission.WRITE_EXTERNAL_STORAGE, Permission.READ_PHONE_STATE};
 
     @Override
@@ -32,9 +34,11 @@ public class BlockCanaryActivity extends AppCompatActivity implements View.OnCli
 
         testBlockBtn = findViewById(R.id.testBlockBtn);
         blockCanaryBtn = findViewById(R.id.blockCanaryBtn);
+        choreographerBtn = findViewById(R.id.choreographerBtn);
 
         testBlockBtn.setOnClickListener(this);
         blockCanaryBtn.setOnClickListener(this);
+        choreographerBtn.setOnClickListener(this);
     }
 
     /**
@@ -77,6 +81,10 @@ public class BlockCanaryActivity extends AppCompatActivity implements View.OnCli
                         }
                     }
                 });
+                break;
+            case R.id.choreographerBtn:
+                BlockDetectByChoreographer.start(DisplayUtil.getRefreshRate(this));
+                testBlock();
                 break;
             default:
                 break;

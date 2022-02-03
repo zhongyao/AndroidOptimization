@@ -4,8 +4,7 @@ import android.app.Application;
 import android.util.Log;
 
 import com.github.moduth.blockcanary.BlockCanary;
-import com.hongri.optimization.blockcanary.customtools.BlockDetectByPrinter;
-import com.hongri.optimization.blockcanary.realtools.AppBlockCanaryContext;
+import com.hongri.optimization.blockmonitor.blockcanary.AppBlockCanaryContext;
 
 public class OptimizationApplication extends Application {
 
@@ -18,7 +17,7 @@ public class OptimizationApplication extends Application {
 //        BlockDetectByPrinter.start();
 
         //检测主线程耗时【BlockCanary】
-        BlockCanary.install(this, new AppBlockCanaryContext()).start();
+//        BlockCanary.install(this, new AppBlockCanaryContext()).start();
 
     }
 }
