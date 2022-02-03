@@ -16,6 +16,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    // 支持 JDK 1.8
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -25,9 +30,18 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
     //leakCanary -- 检测内存泄漏
     //从2.5.0版本之后就不需要在Application中初始化
     //logcat中有打印：LeakCanary is running and ready to detect memory leaks. 表明初始化成功
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.8.1'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:2.8.1'
+
+    implementation 'com.github.markzhai:blockcanary-android:1.5.0'
+    // 仅在debug包启用BlockCanary进行卡顿监控和提示的话，可以这么用
+    debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
+    releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
+
+    // 权限请求框架：https://github.com/getActivity/XXPermissions
+    implementation 'com.github.getActivity:XXPermissions:13.2'
 }

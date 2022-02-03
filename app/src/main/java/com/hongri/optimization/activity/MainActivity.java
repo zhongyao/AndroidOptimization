@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.hongri.optimization.R;
-import com.hongri.optimization.blockcanary.customtools.BlockCanaryActivity;
+import com.hongri.optimization.blockcanary.BlockCanaryActivity;
 import com.hongri.optimization.leakcanary.LeakCanaryActivity;
 
 /**
