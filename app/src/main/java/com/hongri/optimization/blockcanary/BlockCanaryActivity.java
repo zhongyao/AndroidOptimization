@@ -17,6 +17,7 @@ import java.util.List;
 
 /**
  * 卡顿检测优化Activity【BlockCanary的运用】
+ * 参考：https://www.jianshu.com/p/d172aafc3437
  */
 public class BlockCanaryActivity extends AppCompatActivity implements View.OnClickListener {
 
