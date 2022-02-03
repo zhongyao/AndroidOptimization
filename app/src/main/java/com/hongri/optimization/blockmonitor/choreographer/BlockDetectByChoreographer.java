@@ -37,10 +37,12 @@ public class BlockDetectByChoreographer {
                     lastTime = frameTimeNanos;
                 }
 
+                //以下方法用于收集具体卡顿日志--BEGIN
                 if (LogMonitor.getInstance().isMonitor()) {
                     LogMonitor.getInstance().removeMonitor();
                 }
                 LogMonitor.getInstance().startMonitor();
+                //END
                 Choreographer.getInstance().postFrameCallback(this);
             }
         });
