@@ -1,6 +1,7 @@
 package com.hongri.optimization.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button renderingAnalysisBtn;
     private Button leakCanaryBtn;
     private Button blockCanaryBtn;
+    private Button bitmapBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         renderingAnalysisBtn = findViewById(R.id.renderingAnalysisBtn);
         leakCanaryBtn = findViewById(R.id.leakCanaryBtn);
         blockCanaryBtn = findViewById(R.id.blockCanaryBtn);
+        bitmapBtn = findViewById(R.id.bitmapBtn);
 
         btn.setOnClickListener(this);
         overdrawBtn.setOnClickListener(this);
@@ -77,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         renderingAnalysisBtn.setOnClickListener(this);
         leakCanaryBtn.setOnClickListener(this);
         blockCanaryBtn.setOnClickListener(this);
+        bitmapBtn.setOnClickListener(this);
     }
 
     @Override
@@ -105,6 +109,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.blockCanaryBtn:
                 Intent intentBlockCanary = new Intent(this, BlockCanaryActivity.class);
                 startActivity(intentBlockCanary);
+                break;
+            case R.id.bitmapBtn:
+                Intent intentBitmap = new Intent(this, BitmapActivity.class);
+                startActivity(intentBitmap);
                 break;
             default:
                 break;

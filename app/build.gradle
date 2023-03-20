@@ -44,4 +44,9 @@ dependencies {
 
     // 权限请求框架：https://github.com/getActivity/XXPermissions
     implementation 'com.github.getActivity:XXPermissions:13.2'
+
+    // 引入epic开源库 通过ARTHook方法可以优雅的获取不合理图片，侵入性低，但是因为兼容性问题一般在线下使用。
+    implementation 'me.weishu:epic:0.6.0'
+
+    implementation project(':androidbitmapcanary')
 }

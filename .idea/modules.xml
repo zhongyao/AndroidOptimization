@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidOptimization.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidOptimization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidbitmapcanary/AndroidOptimization.androidbitmapcanary.iml" filepath="$PROJECT_DIR$/.idea/modules/androidbitmapcanary/AndroidOptimization.androidbitmapcanary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidbitmapcanary/AndroidOptimization.androidbitmapcanary.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/androidbitmapcanary/AndroidOptimization.androidbitmapcanary.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidbitmapcanary/AndroidOptimization.androidbitmapcanary.main.iml" filepath="$PROJECT_DIR$/.idea/modules/androidbitmapcanary/AndroidOptimization.androidbitmapcanary.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidbitmapcanary/AndroidOptimization.androidbitmapcanary.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/androidbitmapcanary/AndroidOptimization.androidbitmapcanary.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidOptimization.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidOptimization.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidOptimization.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidOptimization.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidOptimization.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidOptimization.app.main.iml" />

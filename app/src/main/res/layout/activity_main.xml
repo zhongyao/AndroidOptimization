@@ -62,4 +62,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/leakCanaryBtn" />
 
+    <Button
+        android:id="@+id/bitmapBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="检测不合理图片(Bitmap)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blockCanaryBtn" />
+
 </android.support.constraint.ConstraintLayout>
