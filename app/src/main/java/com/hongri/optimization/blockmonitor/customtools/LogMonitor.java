@@ -19,7 +19,7 @@ public class LogMonitor {
     private static final String TAG = "LogMonitor";
     private static LogMonitor sInstance = new LogMonitor();
     private Handler mIoHandler;
-    //方法耗时的卡口,300毫秒
+    //方法耗时的卡口,默认300毫秒
     private static long TIME_BLOCK = 300L;
 
     private LogMonitor() {

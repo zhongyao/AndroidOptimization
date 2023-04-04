@@ -9,8 +9,8 @@ import com.hongri.optimization.blockmonitor.customtools.LogMonitor;
 /**
  * 界面的显示：
  * CPU的计算 ---> GPU栅格化 ---> 设备显示
- * 参考：https://cloud.tencent.com/developer/article/1419031
- * 参考：https://blog.csdn.net/lmj623565791/article/details/58626355
+ * 参考：<a href="https://cloud.tencent.com/developer/article/1419031">...</a>
+ * 参考：<a href="https://blog.csdn.net/lmj623565791/article/details/58626355">...</a>
  */
 public class BlockDetectByChoreographer {
     private static String TAG = "性能检测";
@@ -29,10 +29,12 @@ public class BlockDetectByChoreographer {
                     //代码第一次初始化。不做检测统计。
                     lastTime = frameTimeNanos;
                 } else {
+                    //纳秒(ns)转换成毫秒(ms)
                     long times = (frameTimeNanos - lastTime) / 1000000;
-                    int frames = (int) (times / (1000 / refreshRate));
+                    //计算丢帧数
+                    int dropFrames = (int) (times / (1000 / refreshRate));
                     if (times > 16) {
-                        Log.e(TAG, "UI线程超时(超过16ms):" + times + "ms" + " , 丢帧:" + frames);
+                        Log.e(TAG, "UI线程超时(超过16ms):" + times + "ms" + " , 丢帧:" + dropFrames);
                     }
                     lastTime = frameTimeNanos;
                 }
